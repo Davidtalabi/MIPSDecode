@@ -1,47 +1,54 @@
-Hi!
+MIPSDecode
+====================
+Hi!<br>
 **MIPSDecode** is a python based script that converts lines of MIPS code into hex and binary.
 
 It works with all of the instructions in the "Core Instruction Set" from the MIPS reference sheet
 which can be found here: http://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
 
 
-**INSTRUCTIONS:**
+Instructions:
+--------------------------------------------------------------------------------
+
 To run the script, simply cd into the folder containing the files and run:
-*python3 -i MIPSdecoder.py*
+>python3 -i MIPSdecoder.py
 
 Then type whatever line of MIPS code you wish to decode.
 
-**EXAMPLE OUTPUT**
-WELCOME TO THE MIPS DECODER!
-Type MIPS code below to see it in binary and hex form
-Syntax: If using hex, use the '0x' label
-Type 'exit' to exit
+Example Output:
 --------------------------------------------------------------------------------
-Type MIPS code here: add $t0 $t0 $t0
+<blockquote>
+<p>Type MIPS code here: add $t0 $t0 $t0</p>
 
-Function type: R-Type
-Instruction form: opcode|  rs |  rt |  rd |shamt| funct
-Formatted binary: 000000|01000|01000|01000|00000|100000
-Binary:           0b00000001000010000100000000100000
-Hex:              0x01084020
+<p>Function type: R-Type<br>
+Instruction form:  opcode  /  rs / rt / rd / shamt / funct<br>
+Formatted binary: 000000 /  01000 / 01000 / 01000 / 00000 / 100000<br>
+Binary:           0b00000001000010000100000000100000<br>
+Hex:              0x01084020</p>
+</blockquote>
 --------------------------------------------------------------------------------
-Type MIPS code here: addi $t0 $t0 1
+<blockquote>
+<p>Type MIPS code here: addi $t0 $t0 1</p>
 
-Function type: I-Type
-Instruction form: opcode|  rs |  rt |   immediate      
-Formatted binary: 001000|01000|01000|0000000000000001
-Binary:           0b00100001000010000000000000000001
-Hex:              0x21080001
+<p>Function type: I-Type<br>
+Instruction form:  opcode / rs / rt / immediate  <br>    
+Formatted binary: 001000 / 01000 / 01000 / 0000000000000001<br>
+Binary:           0b00100001000010000000000000000001<br>
+Hex:              0x21080001</p>
+</blockquote>
 --------------------------------------------------------------------------------
-Type MIPS code here: asdf
+<blockquote>
+<p>Type MIPS code here: j 0x4</p>
 
-Not a valid MIPS statement
+<p>Function type: I-Type<br>
+Instruction form: opcode /         immediate       <br>    
+Formatted binary: 000010 / 00000000000000000000000100<br>
+Binary:           0b00001000000000000000000000000100<br>
+Hex:              0x08000004<p>
+</blockquote>
 --------------------------------------------------------------------------------
-Type MIPS code here: j 0x4
+<blockquote>
+<p>Type MIPS code here: asdf</p>
 
-Function type: I-Type
-Instruction form: opcode|          immediate           
-Formatted binary: 000010|00000000000000000000000100
-Binary:           0b00001000000000000000000000000100
-Hex:              0x08000004
---------------------------------------------------------------------------------
+</p>Not a valid MIPS statement</p>
+</blockquote>
